@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="image-box" style="float: left; width: 300px; height: 55%; margin: 5px 7px 5px 7px;
+        display: inline-block">
+        <img style="border: solid 2px #d39e00; border-radius: 20%; margin: 5px 7px 5px 7px"
+             src="static/img/back_group.jpg" alt="Image Group">
+    </div>
+    <div class="info-box" style="float: left; width: 70%; height: 55%; margin: 10px 7px 5px 7px;
+        display: inline-block; padding: 6px 3px 5px 6px; font-size: 1.1rem">
+        <h1> О группе Sema Zayka</h1>
+        <hr style="border: solid 1px gray">
+        {% for element in inform %}
+            <p>{{ element }}</p>
+        {% endfor %}
+    </div>
+    <div class="bottom-box" style="float: left; width: 98%; height: 40%; margin: 5px 7px 5px 7px;
+       padding: 6px 3px 5px 6px; border: solid 2px gray">
+        <h1>Хотите сотрудничать? Хотите поддержать монетой авторов контента? Хотите рекламную интеграцию?</h1>
+        <h2>По всем вопросам обращаться ЛИБО на почтовый ящик сообщества (semazayka@mail.ru), ЛИБО к одному из
+        представителей сообщества!</h2>
+        <h3>Не ведитесь на фейки, мы являемся официальным сайтом сообщества и представителями музыкантов!</h3>
+
+    </div>
+{% endblock %}

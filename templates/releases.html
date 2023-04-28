@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for title, inform in dict_inform.items() %}
+        <div class="row" style="display: flex; flex-wrap: wrap; margin-right: -15px; margin-left: -15px;
+            justify-content: center">
+                <div class="image-box" style="float: left; width: 300px; height: 55%; margin: 5px 7px 5px 7px;
+                    display: inline-block">
+                    <img style="border: solid 2px #d39e00; border-radius: 20%; margin: 5px 7px 5px 7px"
+                        src="{{inform[-1]}}" alt="{{title}}">
+                    <hr>
+                </div>
+                <div class="info-box" style="float: left; width: 70%; height: 55%; margin: 10px 7px 5px 7px;
+                    display: inline-block; padding: 6px 3px 5px 6px; font-size: 1.1rem">
+                    <h1>{{title}}</h1>
+                    {% for string in inform[:-1] %}
+                        <p>{{string}}</p>
+                    {% endfor %}
+                </div>
+        </div>
+    {% endfor %}
+{% endblock %}
